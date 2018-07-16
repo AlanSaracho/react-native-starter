@@ -1,12 +1,21 @@
 import React from 'react';
 import {Text} from 'react-native';
+import PropTypes from 'prop-types';
 
 import styles from './styles';
 
-const MyCustomText = () => (
+const MyCustomText = ({children}) => (
     <Text style={styles.instructions}>
-        Let´s Code!
+        {children}
     </Text>
 );
+
+MyCustomText.propTypes = {
+    children: PropTypes.string
+};
+
+MyCustomText.defaultProps = {
+    children: ''
+};
 
 export default MyCustomText;

@@ -4,6 +4,6 @@ export default {
         color: '#333333',
         marginTop: 8,
         fontSize: 22,
-        transform: [{rotate: '-10deg'}]
+        transform: [{rotate: '-180deg'}]
     }
 };
