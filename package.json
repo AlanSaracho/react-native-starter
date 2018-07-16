@@ -5,7 +5,8 @@
   "scripts": {
     "start": "node node_modules/react-native/local-cli/cli.js start",
     "test": "jest",
-    "commitmsg": "commitlint -e .git/COMMIT_EDITMSG"
+    "eslint": "./node_modules/.bin/eslint app/src/",
+    "commitmsg": "npm run eslint && commitlint -e .git/COMMIT_EDITMSG"
   },
   "dependencies": {
     "lodash": "^4.17.10",
