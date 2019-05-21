@@ -1,8 +1,8 @@
-import {createStackNavigator} from 'react-navigation';
+import {createStackNavigator, createAppContainer} from 'react-navigation';
 
 import HelloPrometium from './HelloPrometium';
 
-export default createStackNavigator({
+const RootNavigator = createStackNavigator({
     Home: {
         screen: HelloPrometium,
         navigationOptions: {
@@ -10,3 +10,7 @@ export default createStackNavigator({
         }
     }
 });
+
+const App = createAppContainer(RootNavigator);
+
+export default App;
