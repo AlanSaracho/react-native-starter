@@ -9,4 +9,5 @@ const store = configureStore();
 export default () => (
     <Provider store={store}>
         <Screens/>
-    </Provider>);
+    </Provider>
+);
