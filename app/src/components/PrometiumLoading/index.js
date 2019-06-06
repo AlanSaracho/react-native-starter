@@ -9,6 +9,7 @@ const PrometiumLoading = () => (
         iterationCount="infinite"
         easing="linear"
         duration={8000}
+        useNativeDriver
         animation={{
             from: {rotate: '0deg'},
             to: {rotate: '360deg'}
