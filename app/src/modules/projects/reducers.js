@@ -1,18 +1,11 @@
-const actions = {
-    ADD_PROJECT: 'add_project'
-};
+import {generateChillout} from 'redux-chillout';
 
-export function addProject() {
-    return {type: actions.ADD_PROJECT};
-}
+const {actions, reducer} = generateChillout({
+    addProject: (state, {amount}) => ({amount: state.amount + amount}),
+    removeProject: (state, {amount}) => ({amount: state.amount - amount})
+}, {
+    amount: 0
+});
 
-const reducer = (state = {}, action) => {
-    switch (action.type) {
-        case actions.ADD_PROJECT:
-            return {...state, amount: state.amount + 1};
-        default:
-            return state;
-    }
-};
-
+export {actions};
 export default reducer;

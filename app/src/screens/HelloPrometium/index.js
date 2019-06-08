@@ -8,7 +8,7 @@ import {replace} from 'lodash';
 import {PrometiumLoading} from '../../components';
 import MyCustomText from './components/MyCustomText';
 import styles from './styles';
-import * as actions from '../../modules/projects/reducers';
+import {actions} from '../../modules/projects/reducers';
 import {POEM} from '../../utils/constants';
 
 class HelloPrometium extends Component {
@@ -19,7 +19,7 @@ class HelloPrometium extends Component {
 
     handleAddProject() {
         const {addProject} = this.props;
-        addProject();
+        addProject({amount: 3});
     }
 
     render() {
